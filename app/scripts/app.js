@@ -7,8 +7,8 @@ angular.module('zgzApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'HolaController'
+        templateUrl: 'views/listado.html',
+        controller: 'ListadoController'
       })
       .otherwise({
         redirectTo: '/'

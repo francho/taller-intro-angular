@@ -11,13 +11,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'app/bower_components/chai/chai.js',
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-resource/angular-resource.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -49,6 +49,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: true
   });
 };
