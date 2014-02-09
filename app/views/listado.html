@@ -7,8 +7,17 @@
         <div class="col-md-5">
             <input class="input-lg" type="text" placeholder="buscar..." ng-model="busqueda">
         </div>
-        <div class="col-md-7">
-            <h4>ordenar por: </h4>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-default btn-lg" ng-click="ordenAscendente = !ordenAscendente">
+                <span class="glyphicon"
+                      ng-class="{
+                      'glyphicon-sort-by-alphabet' : ordenAscendente,
+                      'glyphicon-sort-by-alphabet-alt' : !ordenAscendente
+                      }"></span>
+            </button>
+        </div>
+        <div class="col-md-5">
+            orden<br/>
 
             <label class="checkbox-inline">
                 <input type="radio" ng-model="orden" value="title"> nombre
