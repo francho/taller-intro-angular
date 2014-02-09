@@ -30,12 +30,24 @@
     </div>
 
     <ul>
-        <li ng-repeat="restaurante in restaurantes.result|filter:busqueda|orderBy:orden:ordenAscendente">
+        <li ng-repeat="restaurante in restaurantes.result|filter:busqueda|orderBy:orden:ordenAscendente|limitTo:limite">
             <span class="badge glyphicon glyphicon-cutlery pull-right" ng-bind="restaurante.tenedores"></span>
             {{ restaurante.title }}
         </li>
     </ul>
 
+    {{ limite }} de {{ restaurantes.totalCount}}
+    <div class="row">
+        <div class="col-md-6">
+            <button type="button" class="block-center btn btn-primary btn-lg btn-block" ng-click="verMas()">ver más
+            </button>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="block-center btn btn-default btn-lg btn-block" ng-click="verMenos()">
+                ver menos
+            </button>
+        </div>
+    </div>
 
 
 </div>

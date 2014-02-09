@@ -7,6 +7,16 @@ angular.module('zgzApp')
     $scope.orden = 'title';
     $scope.ordenInverso = false;
     $scope.busqueda = '';
+    $scope.limite = 5;
+
+    $scope.verMas = function () {
+      $scope.limite += 5;
+    }
+
+    $scope.verMenos = function () {
+      $scope.limite -= ($scope.limite > 5) ? 5 : 0;
+    }
+
   }
 );
 
