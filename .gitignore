@@ -1,0 +1,17 @@
+# IDEs
+
+.idea
+*.iml
+atlassian-ide-plugin.xml
+nbproject
+
+# Frontend
+
+dist
+# app/components
+.tmp
+npm-debug.log
+node_modules
+.swp
+*.sass-cache
+
