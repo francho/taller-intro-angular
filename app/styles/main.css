@@ -1,0 +1,27 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+
+body {
+    background: #666666;
+}
+
+.searchbox {
+    margin: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    box-shadow:  7px 7px 5px 0px rgba(50, 50, 50, 0.25);
+
+}
+
+.container {
+    border-radius: 4px;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fefefe ;
+    padding-bottom: 20px;
+}
