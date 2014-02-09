@@ -1,4 +1,32 @@
+<div>
 
-<ul>
-    <li ng-repeat="restaurante in restaurantes.result">{{restaurante.title}}</li>
-</ul>
+    <h1>Restaurantes de Zaragoza</h1>
+
+    <div class="searchbox row">
+
+        <div class="col-md-5">
+            <input class="input-lg" type="text" placeholder="buscar..." ng-model="busqueda">
+        </div>
+        <div class="col-md-7">
+            <h4>ordenar por: </h4>
+
+            <label class="checkbox-inline">
+                <input type="radio" ng-model="orden" value="title"> nombre
+            </label>
+
+            <label class="checkbox-inline">
+                <input type="radio" ng-model="orden" value="tenedores"> categoría
+            </label>
+        </div>
+    </div>
+
+    <ul>
+        <li ng-repeat="restaurante in restaurantes.result|filter:busqueda|orderBy:orden:ordenAscendente">
+            <span class="badge glyphicon glyphicon-cutlery pull-right" ng-bind="restaurante.tenedores"></span>
+            {{ restaurante.title }}
+        </li>
+    </ul>
+
+
+
+</div>

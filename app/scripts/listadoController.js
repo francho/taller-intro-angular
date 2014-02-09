@@ -4,9 +4,9 @@ angular.module('zgzApp')
   .controller('ListadoController', function ($scope, RestaurantesService) {
     $scope.restaurantes = RestaurantesService.getRestaurantes();
 
-
-    console.log($scope.restaurantes);
-
+    $scope.orden = 'title';
+    $scope.ordenInverso = false;
+    $scope.busqueda = '';
   }
 );
 
