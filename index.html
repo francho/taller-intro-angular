@@ -1,57 +1,222 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset='utf-8'/>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-    <meta name="description"
-          content="Taller-intro-angular : Material del taller de introducción a Angular organizado para Agile Aragon"/>
+    <meta charset="utf-8">
+    <title>Taller de introducción a Angular</title>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-image: url(images/noise.png);
+        }
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        .step {
+            position: relative;
+            padding: 40px;
+            margin: 0 auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            /*font-family: 'PT Serif', georgia, serif;*/
+            font-family: 'Indie Flower', cursive;
+            font-size: 48px;
+            line-height: 1.5;
+        }
 
-    <title>Taller-intro-angular</title>
+        .slide {
+            display: block;
+            width: 800px;
+            height: 600px;
+            padding: 60px 60px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, .3);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+            color: rgb(102, 102, 102);
+            text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+            /*font-family: 'Open Sans', Arial, sans-serif;*/
+            font-family: 'Indie Flower', cursive;
+        }
+
+        .slide h2, .slide ul {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+        }
+
+        .credits, .credits h2 {
+            padding-top: 0;
+        }
+
+        .avatar {
+            margin-right: 30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            -webkit-border-radius: 75px;
+            -moz-border-radius: 75px;
+            background: url(http://s.gravatar.com/avatar/af1a2f1b3172ddd31dc019821532bdee?s=150) no-repeat;
+        }
+
+        .title {
+            padding: 0px
+        }
+
+        .title h2, .title small {
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .logo {
+            width:100%;
+            background: #FF0000;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .codetime {
+            background: #ffdfc1;
+        }
+    </style>
 </head>
+<body class="impress-supported impress-enabled" style="height: 100%; overflow: hidden;">
 
-<body>
+<div id="impress">
 
-<!-- HEADER -->
-<div id="header_wrap" class="outer">
-    <header class="inner">
-        <a id="forkme_banner" href="https://github.com/francho/taller-intro-angular">View on GitHub</a>
+    <div class="step slide title" data-x="-400" data-y="-300" data-rotate="0" data-scale="1.1156249999999999">
+        <div class="logo" style="">
+            <img src="images/logo_agilearagon_web.png">
+        </div>
 
-        <h1 id="project_title">Taller-intro-angular</h1>
+        <h2>AngularJS</h2>
+        <small style="-webkit-margin-before: 96px;
+        display: inline-block;">(otra intro)
+        </small>
+    </div>
 
-        <h2 id="project_tagline">Taller de introducción a Angular organizado para Agile Aragon</h2>
+    <div class="step slide" data-x="875" data-y="-299" data-rotate="0" data-scale="1">
+        <h2>¿y tu quién eres?</h2>
 
-        <section id="downloads">
-            <a class="zip_download_link" href="https://github.com/francho/taller-intro-angular/zipball/master">Download
-                this project as a .zip file</a>
-            <a class="tar_download_link" href="https://github.com/francho/taller-intro-angular/tarball/master">Download
-                this project as a tar.gz file</a>
-        </section>
-    </header>
+        <div class="avatar" style="float:left"></div>
+        Francho Joven<br/>
+        <a href="https://twitter.com/francholab">@francholab</a><br/>
+        <a href="http://francho.org/about">http://francho.org/about</a>
+    </div>
+
+    <div class="step slide" data-x="631" data-y="449" data-rotate="36" data-scale="1">
+        <h2>Angular JS</h2>
+        <ul>
+            <li>framework de javascript</li>
+            <li>expresivo, legible y rápido de desarrollar</li>
+            <li><q>extiende el HTML</q></li>
+            <li>modelo MVC</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="1331" data-y="849" data-rotate="0" data-scale="1">
+        <b>exportable / rehutilizable</b>
+        <ul>
+            <li>Trabaja bien con otras tecnologías</li>
+            <li>No necesita de un estado global</li>
+            <li>(varias apps Angular en una misma página sin iframes)</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="2331" data-y="849" data-rotate="0" data-scale="1">
+        <b>injectable</b>
+        <ul>
+            <li>basada en inyección de dependencias</li>
+            <li>nos permite cambiar el contexto de nuestros componentes</li>
+            <li>facilita mucho los tests</li>
+        </ul>
+    </div>
+
+
+    <div class="step slide" data-x="-793" data-y="912" data-rotate="108" data-scale="1">
+        <b>pensado para ser testeado</b>
+        <ul>
+            <li>Fomenta la separación <q>comportamiento</q> / <q>vista</q></li>
+            <li>mocks pre-empaquetados</li>
+            <li>inyección de dependencias</li>
+            <li>doc con de ejemplos de test</li>
+            <li>KARMA (E2E también)</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="-1431" data-y="449" data-rotate="144" data-scale="1">
+        <h2>Controller</h2>
+        <ul>
+            <li>lógica de negocio que interactua con la vista</li>
+            <li>inicializan el $scope</li>
+            <li>NO deben tocar el DOM</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="-1675" data-y="-300" data-rotate="180" data-scale="1">
+        <h2>modelo</h2>
+        <ul>
+            <li>se almacena usando $scope</li>
+            <li>información a usar en las vistas</li>
+        </ul>
+    </div>
+
+    <div class="step slide codetime" data-x="-2575" data-y="-149" data-rotate="180" data-scale="1">
+        <h2>¡a programar!</h2>
+        <q>hola angular</q>
+
+        <ul>
+            <li>estructura de un proyecto Angular</li>
+            <li>bootstrap de la app</li>
+            <li><q>bindeo</q> bidireccional</li>
+        </ul>
+
+    </div>
+
+    <div class="step slide" data-x="-1431" data-y="-1049" data-rotate="216" data-scale="1">
+        <h2>Services</h2>
+        <ul>
+            <li>singletons</li>
+            <li>lógica de negocio independiente de la vista</li>
+            <li>angular trae muchos: $http, $animate, $locale...</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="-793" data-y="-1512" data-rotate="252" data-scale="1">
+        <h2>usando servicios</h2>
+        <ul>
+            <li>debemos identificarlos como dependencia</li>
+        </ul>
+    </div>
+
+
+    <div class="step slide codetime" data-x="-2575" data-y="-749" data-rotate="180" data-scale="1">
+        <h2>¡a programar!</h2>
+        <q>servicio de restaurantes</q>
+
+        <ul>
+            <li>crear servicio</li>
+            <li>usar servicio</li>
+        </ul>
+
+    </div>
+
+
+    <div class="step slide" data-x="-6" data-y="-1512" data-rotate="288" data-scale="1"><q>Slide 9</q></div>
+    <div class="step slide credits" data-x="631" data-y="-1049" data-rotate="324" data-scale="1">
+        <h2>Credits</h2>
+        <ul>
+            <li>
+                <a href="http://bartaz.github.io/impress.js" target="_blank">impress.js</a> - Bartek Szopka
+            </li>
+            <li>
+                <a href="http://wmh.github.io/circular-slides-generator" target="_blank">Circular Slides Generator</a> -
+                Hunter Wu
+            </li>
+        </ul>
+    </div>
+    <div class="step" data-x="0" data-y="0" data-scale="6"></div>
 </div>
-
-<!-- MAIN CONTENT -->
-<div id="main_content_wrap" class="outer">
-    <section id="main_content" class="inner">
-        <h3>
-            <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span
-                    class="octicon octicon-link"></span></a>Bienvenid@</h3>
-
-            <p>Este es el material que necesitaremos para el <a href="http://agile-aragon.org/2014/02/04/taller-de-introduccion-a-angularjs/">taller de introducción a Angular organizado por Agile Aragon</a></p>
-    </section>
-</div>
-
-<!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <p class="copyright">Taller-intro-angular maintained by <a href="https://github.com/francho">francho</a></p>
-
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-    </footer>
-</div>
-
-
+<script src="vendor/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
 </body>
 </html>
