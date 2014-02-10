@@ -1,0 +1,40 @@
+<div class="row ">
+    <div class="col-md-12 center-block">
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="panel-title" ng-click="verTodo = !verTodo">
+                    <span class="glyphicon"
+                         ng-class="{
+                            'glyphicon-chevron-right' : !verTodo,
+                            'glyphicon-chevron-down' : verTodo
+                         }"></span>
+
+                        <span class="badge glyphicon glyphicon-cutlery pull-right"
+                              ng-bind="restaurante.tenedores"></span>
+                    {{ restaurante.title }}
+                </h3>
+            </div>
+            <div class="panel-body" ng-if="verTodo">
+                <img ng-if="restaurante.image" class="img-thumbnail pull-right" style="height: 100px; heigh: 100px"
+                     ng-src="http://www.zaragoza.es/{{restaurante.image}}">
+
+                <p>{{ restaurante.streetAddress }}<br/>
+                    {{ restaurante.postalCode }} {{ restaurante.city }}</p>
+
+                <p ng-bind="restaurante.tel.tel|telefono"></p>
+
+                <p ng-bind="restaurante.email"></p>
+
+                <p ng-bind="restaurante.web"></p>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

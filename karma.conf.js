@@ -1,7 +1,7 @@
 // Karma configuration
 // http://karma-runner.github.io/0.10/config/configuration-file.html
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     // base path, that will be used to resolve files and exclude
     basePath: '',
@@ -18,8 +18,13 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      'views/**/*.html',
     ],
+
+    preprocessors: {
+      'views/**/*.html': 'html2js'
+    },
 
     // list of files / patterns to exclude
     exclude: [],
