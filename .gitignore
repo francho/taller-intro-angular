@@ -7,7 +7,7 @@ nbproject
 
 # Frontend
 
-dist
+/dist
 # app/components
 .tmp
 npm-debug.log
