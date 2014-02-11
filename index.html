@@ -9,6 +9,15 @@
             background-image: url(images/noise.png);
         }
 
+        a, a:hover, a:visited {
+            text-decoration: none;
+            color: rgb(102, 102, 102);
+        }
+
+        li {
+            list-style-type: square;
+        }
+
         .step {
             position: relative;
             padding: 40px;
@@ -39,7 +48,7 @@
             font-family: 'Indie Flower', cursive;
         }
 
-        .slide h2, .slide ul {
+        .slide h2, .slide ul, .slide h3 {
             -webkit-margin-before: 0;
             -webkit-margin-after: 0;
         }
@@ -63,19 +72,42 @@
         }
 
         .title h2, .title small {
-            margin: 0 auto;
             display: inline-block;
         }
 
+        .title h2 {
+            padding-left: 150px;
+        }
+
         .logo {
-            width:100%;
-            background: #FF0000;
+            width: 100%;
+            background: #ff5042;
             margin-top: 20px;
             margin-bottom: 60px;
         }
 
         .codetime {
-            background: #ffdfc1;
+            background: #fefeb0;
+        }
+
+        .codetime h2 {
+            text-align: right;
+            font-size: 0.7em;
+            font-style: italic;
+            font-weight: bold;
+            -webkit-transform: rotate(25deg);
+            right: 20px;
+            position: absolute;
+        }
+
+        .codetime h3 {
+            -webkit-margin-before: 35px;
+        }
+
+        .codetime a {
+            font-size: 0.7em;
+            color: #cc0000;
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -83,7 +115,7 @@
 
 <div id="impress">
 
-    <div class="step slide title" data-x="-400" data-y="-300" data-rotate="0" data-scale="1.1156249999999999">
+    <div class="step slide title" data-x="-700" data-y="0" data-rotate="0" data-scale="1.5">
         <div class="logo" style="">
             <img src="images/logo_agilearagon_web.png">
         </div>
@@ -94,7 +126,7 @@
         </small>
     </div>
 
-    <div class="step slide" data-x="875" data-y="-299" data-rotate="0" data-scale="1">
+    <div class="step slide" data-x="-20" data-y="500" data-rotate="36" data-scale="1">
         <h2>¿y tu quién eres?</h2>
 
         <div class="avatar" style="float:left"></div>
@@ -103,17 +135,17 @@
         <a href="http://francho.org/about">http://francho.org/about</a>
     </div>
 
-    <div class="step slide" data-x="631" data-y="449" data-rotate="36" data-scale="1">
+    <div class="step slide" data-x="0" data-y="1200" data-rotate="0" data-scale="1">
         <h2>Angular JS</h2>
         <ul>
             <li>framework de javascript</li>
             <li>expresivo, legible y rápido de desarrollar</li>
-            <li><q>extiende el HTML</q></li>
             <li>modelo MVC</li>
+            <li><q>extiende el HTML</q></li>
         </ul>
     </div>
 
-    <div class="step slide" data-x="1331" data-y="849" data-rotate="0" data-scale="1">
+    <div class="step slide" data-x="800" data-y="1200" data-rotate="5" data-scale="1">
         <b>exportable / rehutilizable</b>
         <ul>
             <li>Trabaja bien con otras tecnologías</li>
@@ -122,7 +154,7 @@
         </ul>
     </div>
 
-    <div class="step slide" data-x="2331" data-y="849" data-rotate="0" data-scale="1">
+    <div class="step slide" data-x="1520" data-y="1200" data-rotate="-2" data-scale="1">
         <b>injectable</b>
         <ul>
             <li>basada en inyección de dependencias</li>
@@ -132,7 +164,7 @@
     </div>
 
 
-    <div class="step slide" data-x="-793" data-y="912" data-rotate="108" data-scale="1">
+    <div class="step slide" data-x="2200" data-y="1200" data-rotate="2" data-scale="1">
         <b>pensado para ser testeado</b>
         <ul>
             <li>Fomenta la separación <q>comportamiento</q> / <q>vista</q></li>
@@ -143,7 +175,15 @@
         </ul>
     </div>
 
-    <div class="step slide" data-x="-1431" data-y="449" data-rotate="144" data-scale="1">
+    <div class="step slide" data-x="3000" data-y="1200" data-rotate="1" data-scale="1">
+        <img src="images/One_Way_Data_Binding.png" style="position:absolute; top:0px; left:0px;">
+
+        <div style="position: absolute;top: 255px; left: 240px; margin: 0px auto;">¿cuál mola más?</div>
+        <img src="images/Two_Way_Data_Binding.png" style="position: absolute; bottom: 0px; right: 0px;">
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="1800" data-rotate="2" data-scale="1">
         <h2>Controller</h2>
         <ul>
             <li>lógica de negocio que interactua con la vista</li>
@@ -152,7 +192,7 @@
         </ul>
     </div>
 
-    <div class="step slide" data-x="-1675" data-y="-300" data-rotate="180" data-scale="1">
+    <div class="step slide" data-x="0" data-y="2400" data-rotate="-2" data-scale="1">
         <h2>modelo</h2>
         <ul>
             <li>se almacena usando $scope</li>
@@ -160,19 +200,22 @@
         </ul>
     </div>
 
-    <div class="step slide codetime" data-x="-2575" data-y="-149" data-rotate="180" data-scale="1">
+    <div class="step slide codetime" data-x="-850" data-y="2400" data-rotate="0" data-scale="1">
         <h2>¡a programar!</h2>
-        <q>hola angular</q>
+
+        <h3>hola angular</h3>
+
+        <a href="https://github.com/francho/taller-intro-angular">https://github.com/francho/taller-intro-angular</a>
 
         <ul>
-            <li>estructura de un proyecto Angular</li>
+            <li>radiografía de un proyecto</li>
             <li>bootstrap de la app</li>
             <li><q>bindeo</q> bidireccional</li>
         </ul>
 
     </div>
 
-    <div class="step slide" data-x="-1431" data-y="-1049" data-rotate="216" data-scale="1">
+    <div class="step slide" data-x="0" data-y="3000" data-rotate="-1" data-scale="1">
         <h2>Services</h2>
         <ul>
             <li>singletons</li>
@@ -181,17 +224,20 @@
         </ul>
     </div>
 
-    <div class="step slide" data-x="-793" data-y="-1512" data-rotate="252" data-scale="1">
+    <div class="step slide" data-x="900" data-y="3000" data-rotate="2" data-scale="1">
         <h2>usando servicios</h2>
         <ul>
-            <li>debemos identificarlos como dependencia</li>
+            <li>pensarlos para que sean reusables</li>
+            <li>injección de dependencias</li>
+            <li>¡ No olvidarse de identificarlos como dependencia !</li>
         </ul>
     </div>
 
 
-    <div class="step slide codetime" data-x="-2575" data-y="-749" data-rotate="180" data-scale="1">
+    <div class="step slide codetime" data-x="-850" data-y="3000" data-rotate="-1" data-scale="1">
         <h2>¡a programar!</h2>
-        <q>servicio de restaurantes</q>
+
+        <h3>servicio de restaurantes</h3>
 
         <ul>
             <li>crear servicio</li>
@@ -201,22 +247,100 @@
     </div>
 
 
-    <div class="step slide" data-x="-6" data-y="-1512" data-rotate="288" data-scale="1"><q>Slide 9</q></div>
-    <div class="step slide credits" data-x="631" data-y="-1049" data-rotate="324" data-scale="1">
+    <div class="step slide" data-x="0" data-y="3600" data-rotate="0" data-scale="1">
+        <h2>filter</h2>
+        <ul>
+            <li>formatean expresiones para mostrarlas a los usuarios</li>
+            <li>pueden usarse en: plantillas de vista, controladores o servicios</li>
+        </ul>
+    </div>
+
+    <div class="step slide codetime" data-x="-850" data-y="3600" data-rotate="-3" data-scale="1">
+        <h2>¡a programar!</h2>
+
+        <h3>filtros en el listado</h3>
+
+        <ul>
+            <li>ordenar el listado</li>
+            <li>filtrar por campo de texto</li>
+            <li>limitar número de resultados</li>
+        </ul>
+
+    </div>
+
+    <div class="step slide" data-x="0" data-y="4200" data-rotate="-2" data-scale="1">
+        <h2>directivas</h2>
+        <ul>
+            <li>extienden el html con nuestros propios atributos y elementos</li>
+            <li>el único sitio donde se toca el DOM</li>
+            <li>si quieres tocar el DOM ¡escribe una directiva!</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="800" data-y="4200" data-rotate="-2" data-scale="1">
+        <h2>nombre de directivas</h2>
+        <ul>
+            <li>evita problemas, ponles un prefijo. Angular usa 'ng-'</li>
+            <li>camelCase en codigo -> fchHello</li>
+            <li>'-' en el DOM -> fch-hello</li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="1600" data-y="4200" data-rotate="-1" data-scale="1">
+        <h2>creando directivas</h2>
+        <ul>
+            <li>acordarse: dos pasadas <b>compile(...)</b> y <b>link(...)</b></li>
+            <li>muchas opciones: template,transclude, replace...</li>
+            <li>templateUrl es nuestra amiga</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="2400" data-y="4200" data-rotate="1" data-scale="1">
+        <h2>scope en directivas</h2>
+        <ul>
+            <li>'@' enlaza con el valor del atributo DOM</li>
+            <li>'=' enlace bidireccional con el atributo</li>
+            <li>'&' ejecuta una expresion en el contexto del scope padre</li>
+        </ul>
+    </div>
+
+    <div class="step slide codetime" data-x="-850" data-y="4200" data-rotate="-3" data-scale="1">
+        <h2>¡a programar!</h2>
+
+        <h3>directiva restaurante</h3>
+
+        <ul>
+            <li>información detallada</li>
+            <li>mostrará la imagen (si la tiene)</li>
+            <li>se podrá abrir/cerrar la info</li>
+        </ul>
+
+    </div>
+
+
+    <div class="step slide" data-x="-800" data-y="5000" data-scale="0.5">
+        <h2>enlaces</h2>
+        http://angularjs.org/
+        http://yeoman.io/
+        <br/>
+        https://www.ng-book.com/
+        http://www.ng-newsletter.com/
+    </div>
+
+
+    <div class="step slide credits" data-x="-830" data-y="5600" data-rotate="0" data-scale="0.1">
         <h2>Credits</h2>
         <ul>
             <li>
                 <a href="http://bartaz.github.io/impress.js" target="_blank">impress.js</a> - Bartek Szopka
             </li>
-            <li>
-                <a href="http://wmh.github.io/circular-slides-generator" target="_blank">Circular Slides Generator</a> -
-                Hunter Wu
-            </li>
         </ul>
     </div>
-    <div class="step" data-x="0" data-y="0" data-scale="6"></div>
+
+
 </div>
 <script src="vendor/impress.js/js/impress.js"></script>
-<script>impress().init();</script>
+<script>
+    impress().init();
+</script>
 </body>
 </html>
