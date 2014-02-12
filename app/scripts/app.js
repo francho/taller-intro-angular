@@ -10,6 +10,10 @@ angular.module('zgzApp', [
         templateUrl: 'views/listado.html',
         controller: 'ListadoController'
       })
+      .when('/nueva', {
+        templateUrl: 'views/formulario.html',
+        controller: 'AltaController'
+      })
       .otherwise({
         redirectTo: '/'
       });

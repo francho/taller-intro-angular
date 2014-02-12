@@ -6,6 +6,10 @@ angular.module('zgzApp').factory('RestaurantesService', function($resource) {
   return {
     'getRestaurantes' : function() {
       return restaurantes;
+    },
+
+    'nuevoRestaurante' : function(restaurante) {
+      restaurantes.result.push(restaurante);
     }
   }
 

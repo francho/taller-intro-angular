@@ -25,3 +25,11 @@ body {
     background: #fefefe ;
     padding-bottom: 20px;
 }
+
+.css-form input.ng-invalid.ng-dirty {
+    background-color: #fac0c0;
+}
+
+.css-form input.ng-valid.ng-dirty {
+    background-color: #ddffdd;
+}
