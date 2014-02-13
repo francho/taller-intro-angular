@@ -16,14 +16,21 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Latest bootstrap compiled and minified CSS -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="zgzApp">
+
+<!--
+
+   TODO: boot de nuestra app de angular
+
+-->
+
+<body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
     today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
@@ -35,12 +42,20 @@
 <script src="components/json3/lib/json3.min.js"></script>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<div class="container" ng-view></div>
+<!--
+
+    TODO: indicar que el div.container va a contener nuestra vista
+
+ -->
+<div class="container" ></div>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+
+<!--
+
+    TODO: ir añadiendo nuestros componentes
 
 <!-- build:js scripts/scripts.js -->
 <script src="scripts/app.js"></script>
