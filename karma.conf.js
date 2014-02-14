@@ -1,24 +1,43 @@
 // Karma configuration
 // http://karma-runner.github.io/0.10/config/configuration-file.html
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '',
+    basePath: 'app',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
 
+    plugins: [
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor',
+      'karma-chrome-launcher'
+    ],
+
+    preprocessors: {
+      'views/**/*.html': ['html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      // setting this option will create only a single module that contains templates
+      // from all the files, so you can load them all with module('templates')
+      // moduleName: 'templates'
+      stripPrefix: 'app/'
+    },
+
     // list of files / patterns to load in the browser
     files: [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-resource/angular-resource.js',
-      'app/bower_components/angular-route/angular-route.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'bower_components/chai/chai.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-route/angular-route.js',
+      'scripts/app.js',
+      'scripts/*.js',
+      'scripts/**/*.js',
+      '../test/spec/**/*.js',
+      'views/**/*.html'
     ],
 
     // list of files / patterns to exclude
