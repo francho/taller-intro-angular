@@ -30,7 +30,7 @@
 
 -->
 
-<body>
+<body ng-app="zgzApp" >
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
     today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
@@ -47,7 +47,7 @@
     TODO: indicar que el div.container va a contener nuestra vista
 
  -->
-<div class="container" ></div>
+<div class="container" ng-view></div>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
