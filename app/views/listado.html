@@ -30,15 +30,8 @@
         </div>
     </div>
 
-    <ul>
-    <li ng-repeat="restaurante in restaurantes.result|filter:busqueda|orderBy:orden:ordenAscendente|limitTo:limite">
-       {{ restaurante.title }}
-
-                {{restaurante.tenedores }}
-            </li>
-
-    </ul>
-
+    <div ng-repeat="restaurante in restaurantes.result|filter:busqueda|orderBy:orden:ordenAscendente|limitTo:limite">
+        <zgz-restaurante ng-model="restaurante"></zgz-restaurante>
     </div>
 
     {{ limite }} de {{ restaurantes.totalCount}}
