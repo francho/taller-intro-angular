@@ -5,7 +5,7 @@
 // configuración inicial
 
 
-var zgzApp = angular.module('zgzApp', [ 'ngRoute']);
+var zgzApp = angular.module('zgzApp', [ 'ngRoute', 'ngResource']);
 
 zgzApp.config(function ($routeProvider) {
   $routeProvider.when('/', {
