@@ -1,3 +1,22 @@
 
+<ul>
+    <li ng-repeat="restaurante in restaurantes.result|limitTo:limite">
+        {{ restaurante.title }}
 
-{{ restaurantes }}
+        {{restaurante.tenedores }}
+    </li>
+
+</ul>
+
+{{ limite }} de {{ restaurantes.totalCount}}
+<div class="row">
+    <div class="col-md-6">
+        <button type="button" class="block-center btn btn-primary btn-lg btn-block" ng-click="verMas()">ver más
+        </button>
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="block-center btn btn-default btn-lg btn-block" ng-click="verMenos()">
+            ver menos
+        </button>
+    </div>
+</div>
