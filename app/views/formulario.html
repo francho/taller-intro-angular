@@ -1,0 +1,30 @@
+<div>
+
+    <h1>Nuevo restaurante</h1>
+
+    <form name="form" novalidate class="css-form">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" ng-model="restaurante.title" ng-required ng-minlength="3" ng-maxlength="20"/>
+
+        <div ng-if="form.nombre.$invalid" class="alert alert-danger">
+            Es necesario un nombre de restaurante válido
+        </div>
+
+        <label for="tenedores">Tenedores:</label>
+        <input type="number" name="tenedores" ng-model="restaurante.tenedores" ng-required min="0" max="4"/><br/>
+
+        <div ng-if="form.tenedores.$invalid" class="alert alert-danger">
+            tenedores inválidos, tiene que ser un número entre 0 y 4
+        </div>
+
+        {{ restaurante }}
+
+        <button type="button" style="margin-top: 10px" class="block-center btn btn-success btn-lg btn-block"
+                ng-disabled="form.$invalid || restauranteVacio()"
+                ng-click="guardarRestaurante()">
+            guardar
+        </button>
+    </form>
+
+</div>

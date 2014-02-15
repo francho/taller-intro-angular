@@ -12,7 +12,11 @@ zgzApp.config(function ($routeProvider) {
       templateUrl: 'views/listado.html',
       controller: 'ListadoController'
     }
-  ).otherwise({
+  ).when('/nueva', {
+      templateUrl: 'views/formulario.html',
+      controller: 'AltaController'
+    })
+    .otherwise({
       redirectTo: '/'
     });
 });
